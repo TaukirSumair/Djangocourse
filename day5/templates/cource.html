@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEES</title>
+</head>
+<body>
+
+    <h1>Cource Name : {{cource}} {% comment %} Filters : upper , capfirst , default:"", length, lower , truncatechars:3 {% endcomment %}
+        <br>
+        <br>
+        Cource Duration : {{duration}}
+        <br>
+        <br>
+        Cource Fees : {{fees|default:'1000'}}
+        <br>
+        <br>
+        Cource Date launch : {{date}}
+        <br>
+        <br>    
+        FLOATFORMAa T :{{ft | floatformat:2}}
+    </h1>
+
+
+    
+    <h1>
+        {% if cource == 'Pyhton' %}
+            You are in pyhton cource
+         {% endif %}
+    </h1>
+
+    <h1>
+        {% if fees == '1800' or  cource == 'Pyhtonc' %}
+        {{cource}} {{fees}} @Rs
+
+        {% endif %}
+    </h1>
+
+
+
+    =====================================================
+
+    <h1>
+        {% if fees == '180a0' and  cource == 'Pyhton' %}
+            {{cource}} {{fees}} @Rs
+            {% else %}
+            No Cource Available
+         {% endif %}
+    </h1>
+
+    <h1>
+        
+        {{names}}
+        <br>
+        {% for n in names%}
+        <li>{{n}}</li>
+
+        {% empty %}
+
+        khali hai 
+
+        {% endfor %}
+    </h1>
+
+
+</body>
+</html>
+
